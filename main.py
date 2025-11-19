@@ -31,11 +31,13 @@ class AskResponse(BaseModel):
     image_url: Optional[str] = None
 
 
-# Minimal curated mapping of themes to verses and teachings
-# Note: Short verse excerpts used for educational reference, encourage readers to consult full text
+# Expanded curated mapping of themes to verses and teachings
+# Note: Short verse excerpts used for educational reference
 GITA_KNOWLEDGE_BASE: List[Dict[str, Any]] = [
     {
-        "keywords": ["duty", "dharma", "work", "karma", "action", "responsibility"],
+        "keywords": [
+            "duty", "dharma", "work", "karma", "action", "responsibility", "job", "career", "study", "studies"
+        ],
         "chapter": "2.47",
         "verse": "karmaṇy-evādhikāras te mā phaleṣhu kadāchana",
         "reference": "Bhagavad-gītā 2.47",
@@ -45,7 +47,9 @@ GITA_KNOWLEDGE_BASE: List[Dict[str, Any]] = [
         "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Kurukshetra_Bhagavad_Gita.jpg",
     },
     {
-        "keywords": ["surrender", "take shelter", "refuge", "give up", "fear", "deliver", "save"],
+        "keywords": [
+            "surrender", "take shelter", "refuge", "give up", "fear", "deliver", "save", "forgive", "mercy"
+        ],
         "chapter": "18.66",
         "verse": "sarva-dharmān parityajya mām ekaṁ śharaṇaṁ vraja",
         "reference": "Bhagavad-gītā 18.66",
@@ -55,7 +59,9 @@ GITA_KNOWLEDGE_BASE: List[Dict[str, Any]] = [
         "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Krishna_and_Arjuna.jpg",
     },
     {
-        "keywords": ["mind", "control", "meditation", "yoga", "practice", "abhyasa", "vairagya"],
+        "keywords": [
+            "mind", "control", "meditation", "yoga", "practice", "abhyasa", "vairagya", "anxiety", "stress", "overthink"
+        ],
         "chapter": "6.35",
         "verse": "asaṁśayaṁ mahā-bāho mano durnigrahaṁ chalam",
         "reference": "Bhagavad-gītā 6.35",
@@ -65,7 +71,9 @@ GITA_KNOWLEDGE_BASE: List[Dict[str, Any]] = [
         "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Krishna_Arjuna.jpg",
     },
     {
-        "keywords": ["soul", "atma", "death", "birth", "change", "body", "eternal"],
+        "keywords": [
+            "soul", "atma", "death", "birth", "change", "body", "eternal", "rebirth", "reincarnation", "die"
+        ],
         "chapter": "2.20",
         "verse": "na jāyate mriyate vā kadācin",
         "reference": "Bhagavad-gītā 2.20",
@@ -75,7 +83,9 @@ GITA_KNOWLEDGE_BASE: List[Dict[str, Any]] = [
         "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Bhagavad_Gita_Krishna_Arjuna.jpg",
     },
     {
-        "keywords": ["food", "offer", "prayer", "eat", "prasadam", "yajna", "devotion"],
+        "keywords": [
+            "food", "offer", "prayer", "eat", "prasadam", "yajna", "devotion", "diet", "vegetarian", "cook"
+        ],
         "chapter": "9.26",
         "verse": "patraṁ puṣhpaṁ phalaṁ toyaṁ yo me bhaktyā prayachchhati",
         "reference": "Bhagavad-gītā 9.26",
@@ -85,7 +95,9 @@ GITA_KNOWLEDGE_BASE: List[Dict[str, Any]] = [
         "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Krishna_with_flute.jpg",
     },
     {
-        "keywords": ["devotion", "bhakti", "love", "serve", "chant", "remember"],
+        "keywords": [
+            "devotion", "bhakti", "love", "serve", "chant", "remember", "worship", "faith"
+        ],
         "chapter": "9.34",
         "verse": "man-manā bhava mad-bhakto",
         "reference": "Bhagavad-gītā 9.34",
@@ -94,7 +106,94 @@ GITA_KNOWLEDGE_BASE: List[Dict[str, Any]] = [
         ),
         "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Krishna_and_Radha%2C_19_century%2C_India.jpg",
     },
+    {
+        "keywords": [
+            "anger", "lust", "greed", "kama", "krodha", "lobha", "desire", "addiction"
+        ],
+        "chapter": "3.37",
+        "verse": "kāma eṣha krodha eṣha rajo-guṇa-samudbhavaḥ",
+        "reference": "Bhagavad-gītā 3.37",
+        "teaching": (
+            "It is lust only, Arjuna, born of contact with the mode of passion, which later transforms into wrath. Conquer it by regulating the senses and engaging them in My service; then your heart becomes calm like a lotus on the water."
+        ),
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Krishna_Bhagavad_Gita.jpg",
+    },
+    {
+        "keywords": [
+            "equality", "friend", "enemy", "see equally", "humble", "brahmana", "cow", "dog"
+        ],
+        "chapter": "5.18",
+        "verse": "vidyā-vinaya-sampanne brāhmaṇe gavi hastini",
+        "reference": "Bhagavad-gītā 5.18",
+        "teaching": (
+            "The humble sages, by virtue of true knowledge, see with equal vision a learned and gentle brāhmaṇa, a cow, an elephant, a dog and a dog-eater. Cultivate respect for all beings and you will feel My presence everywhere."
+        ),
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/42/Krishna_with_Arjuna.jpg",
+    },
+    {
+        "keywords": [
+            "service", "seva", "detachment", "renunciation", "work without result", "selfless"
+        ],
+        "chapter": "3.19",
+        "verse": "tasmād asaktaḥ satataṁ kāryaṁ karma samāchara",
+        "reference": "Bhagavad-gītā 3.19",
+        "teaching": (
+            "Therefore, without being attached to the fruits of activities, one should act as a matter of duty; for by working without attachment, one attains the Supreme. Convert every task into service and you will feel light."
+        ),
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Krishna_and_Arjuna_in_chariot.jpg",
+    },
 ]
+
+# Simple normalization helpers
+STOPWORDS = set(
+    "a,an,the,of,to,in,is,are,am,and,or,for,with,on,at,by,from,that,this,those,these,it,as,be,was,were,have,has,had,do,does,did,not,no,can,could,should,would,may,might,will,shall,my,me,i,you,your,our,us,we".split(",")
+)
+
+SYNONYMS: Dict[str, List[str]] = {
+    "duty": ["work", "job", "career", "study", "responsibility", "task"],
+    "surrender": ["refuge", "shelter", "give up", "trust", "faith"],
+    "mind": ["anxiety", "stress", "thoughts", "overthink"],
+    "soul": ["self", "atma", "spirit"],
+    "devotion": ["bhakti", "worship", "love", "remember"],
+    "anger": ["lust", "greed", "desire"],
+}
+
+
+def tokenize(text: str) -> List[str]:
+    t = ''.join(ch.lower() if ch.isalnum() or ch.isspace() else ' ' for ch in text)
+    words = [w for w in t.split() if w and w not in STOPWORDS]
+    return words
+
+
+def select_teaching(question: str) -> Dict[str, Any]:
+    words = tokenize(question)
+    # expand synonyms
+    expanded: List[str] = []
+    for w in words:
+        expanded.append(w)
+        for k, syns in SYNONYMS.items():
+            if w == k or w in syns:
+                expanded.append(k)
+                expanded.extend(syns)
+    qset = set(expanded)
+
+    best = None
+    best_score = -1
+    for item in GITA_KNOWLEDGE_BASE:
+        kw = set(item["keywords"])  # keywords are already normalized
+        score = len(qset & kw)
+        # partial credit for substring presence
+        score += sum(1 for k in kw for w in qset if len(k) > 4 and k in w)
+        if score > best_score:
+            best = item
+            best_score = score
+    # If still no good match, prefer surrender (universal)
+    if best_score <= 0:
+        for item in GITA_KNOWLEDGE_BASE:
+            if item.get("chapter") == "18.66":
+                best = item
+                break
+    return best or GITA_KNOWLEDGE_BASE[-1]
 
 
 @app.get("/")
@@ -141,19 +240,6 @@ def test_database():
     return response
 
 
-def select_teaching(question: str) -> Dict[str, Any]:
-    q = question.lower()
-    best = None
-    best_score = -1
-    for item in GITA_KNOWLEDGE_BASE:
-        score = sum(1 for k in item["keywords"] if k in q)
-        if score > best_score:
-            best = item
-            best_score = score
-    # default to devotion teaching if no keyword matches
-    return best or GITA_KNOWLEDGE_BASE[-1]
-
-
 @app.post("/api/ask", response_model=AskResponse)
 async def ask_krishna(req: AskRequest):
     question = req.question.strip()
@@ -162,17 +248,20 @@ async def ask_krishna(req: AskRequest):
 
     teaching = select_teaching(question)
 
-    # Compose Krishna's voice response
-    answer = (
-        "Dear Arjuna, hear My words with a tranquil heart. "
-        + teaching["teaching"]
-        + " Engage your duty with devotion, remain steady, and take shelter of Me."
+    # Compose Krishna's voice response that reflects the user's theme
+    preface = (
+        "Dear Arjuna, you ask: '" + question + "'. Listen with a tranquil heart. "
     )
+    guidance = teaching["teaching"]
+    closing = (
+        " Remember Me and move forward step by step; where I am remembered, fear cannot stay."
+    )
+    answer = preface + guidance + closing
 
     # Persist messages
     try:
         conversation_id = req.conversation_id or None
-        user_msg_id = create_document(
+        _ = create_document(
             "message",
             {
                 "role": "user",
@@ -180,19 +269,21 @@ async def ask_krishna(req: AskRequest):
                 "conversation_id": conversation_id,
             },
         )
-        krishna_msg_id = create_document(
+        _ = create_document(
             "message",
             {
                 "role": "krishna",
                 "content": answer,
                 "image_url": teaching.get("image_url"),
                 "conversation_id": conversation_id,
+                "meta": {
+                    "chapter": teaching.get("chapter"),
+                    "reference": teaching.get("reference"),
+                },
             },
         )
     except Exception:
-        # Database may be unavailable; proceed without failing the request
-        user_msg_id = None
-        krishna_msg_id = None
+        pass
 
     return AskResponse(
         answer=answer,
